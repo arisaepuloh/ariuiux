@@ -1,0 +1,316 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <Link href="/dist/output.css" rel="stylesheet">
+    </Link>
+    <!-- Font Plus Jakarta -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+        rel="stylesheet">
+    <!-- Font Serif -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Libertinus+Serif:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+        rel="stylesheet">
+    <!-- alpine -->
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.js" defer></script>
+    <!-- link aos -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+
+<body class="scroll-smooth bg-[#F8F8F6]">
+
+    <nav x-data="{ open: false, atTop: true, scrollDirection: 'up', lastScroll: 0 }" @scroll.window="atTop = window.pageYOffset <= 50; 
+                     scrollDirection = (window.pageYOffset > lastScroll) ? 'down' : 'up'; 
+                     lastScroll = window.pageYOffset;"
+        class="px-4 lg:px-[160px] lg:py-6 py-4 bg-[#F8F8F6] bg-wh flex items-center justify-between sticky top-0 z-[120] transition-transform duration-500 ease-in-out"
+        :class="(scrollDirection === 'up' || atTop) ? 'translate-y-0' : 'translate-y-[-100%]'">
+        <!-- Logo & Brand -->
+        <a href="home.html" class="flex items-center ">
+            <img src="/public/Logo.png" alt="Logo" class="lg:w-12 lg:h-12 w-8 h-8" />
+            <span class="font-semibold text-lg italic">uiux.byari</span>
+        </a>
+
+        <!-- Menu -->
+        <div class="hidden md:flex items-center space-x-8">
+            <a href="index.html"
+                :class="window.location.pathname.includes('home') ? 'font-bold text-black' : 'text-[#202120] font-medium hover:font-bold hover:text-black'"
+                class="font-Jakarta text-lg transition-all duration-100">
+                Home
+            </a>
+            <a href="project.html"
+                :class="window.location.pathname.includes('project') ? 'font-bold text-black' : 'text-[#202120] font-medium hover:font-bold hover:text-black'"
+                class="font-Jakarta text-lg transition-all duration-100">
+                My Project
+            </a>
+            <a href="404.html"
+                :class="window.location.pathname.includes('service') ? 'font-bold text-black' : 'text-[#202120] font-medium hover:font-bold hover:text-black'"
+                class="font-Jakarta text-lg transition-all duration-100">
+                Service
+            </a>
+        </div>
+
+        <!-- Contact Button -->
+        <a href="https://wa.me/6285860380645"
+            class="bg-[#202120] font-Jakarta text-base lg:text-2xl text-white lg:px-8 lg:py-4 px-4 py-2 rounded-full shadow hover:opacity-90 transition">
+            Contact Us
+        </a>
+    </nav>
+
+
+    <!-- Hero Section -->
+    <section
+        class="px-4 lg:px-[160px]  grid grid-cols-1 md:grid-cols-3 gap-8 items-center bg-[url('/public/bg-project.png')] bg-cover bg-center py-24  ">
+        <!-- Left Content -->
+        <div class="font-Jakarta -mt-96">
+            <h2 class="lg:text-[80px] font-bold leading-[80px] text-[#202120]" data-aos="fade-up"
+                data-aos-duration="900">
+                Collection <br /> of Works
+            </h2>
+            <p class="mt-4 text-[#717E95] text-xl" data-aos="fade-up" data-aos-duration="1200">
+                Designing digital experiences that are functional, aesthetic, and impactful.
+            </p>
+        </div>
+
+        <!-- Image -->
+        <div id="project-wrapper"
+            class="flex justify-center group w-fit overflow-hidden relative transition-transform duration-300 ease-in-out animate-[float_3s_ease-in-out_infinite]">
+            <img id="project-image" src="/public/herro-project.png" alt="project image"
+                class="max-w-[360px] h-auto transition-transform duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] animate-float"
+                data-aos="fade-up" data-aos-duration="1200">
+        </div>
+
+        <!-- Right Content -->
+        <div class="font-Jakarta mt-96">
+            <p class="text-[#717E95] text-xl" data-aos="fade-up" data-aos-duration="900">
+                Presenting a design that is not only beautiful, but also effective.
+            </p>
+            <h2 class="lg:text-[80px] font-bold leading-[80px] text-[#202120 mt-4" data-aos="fade-up"
+                data-aos-duration="1200">
+                Projects I've <br /> Worked On
+            </h2>
+        </div>
+
+    </section>
+
+
+    <!-- Marquee -->
+    <div class="overflow-hidden whitespace-nowrap border-t py-6 border-[#5E697E]">
+        <div class="animate-marquee inline-block font-Jakarta">
+            <span class="text-[60px] font-extralight">FEATURED PROJECTS • FEATURED PROJECTS • FEATURED PROJECTS •
+            </span>
+            <span class="text-[60px] font-extralight">FEATURED PROJECTS • FEATURED PROJECTS • FEATURED PROJECTS •
+            </span>
+            <span class="text-[60px] font-extralight">FEATURED PROJECTS • FEATURED PROJECTS • FEATURED PROJECTS •
+            </span>
+            <span class="text-[60px] font-extralight">FEATURED PROJECTS • FEATURED PROJECTS • FEATURED PROJECTS •
+            </span>
+            <span class="text-[60px] font-extralight">FEATURED PROJECTS • FEATURED PROJECTS • FEATURED PROJECTS •
+            </span>
+            <span class="text-[60px] font-extralight">FEATURED PROJECTS • FEATURED PROJECTS • FEATURED PROJECTS •
+            </span>
+            <span class="text-[60px] font-extralight">FEATURED PROJECTS • FEATURED PROJECTS • FEATURED PROJECTS •
+            </span>
+            <span class="text-[60px] font-extralight">FEATURED PROJECTS • FEATURED PROJECTS • FEATURED PROJECTS •
+            </span>
+            <span class="text-[60px] font-extralight">FEATURED PROJECTS • FEATURED PROJECTS • FEATURED PROJECTS •
+            </span>
+            <span class="text-[60px] font-extralight">FEATURED PROJECTS • FEATURED PROJECTS • FEATURED PROJECTS •
+            </span>
+            <span class="text-[60px] font-extralight">FEATURED PROJECTS • FEATURED PROJECTS • FEATURED PROJECTS •
+            </span>
+            <span class="text-[60px] font-extralight">FEATURED PROJECTS • FEATURED PROJECTS • FEATURED PROJECTS •
+            </span>
+            <span class="text-[60px] font-extralight">FEATURED PROJECTS • FEATURED PROJECTS • FEATURED PROJECTS •
+            </span>
+            <span class="text-[60px] font-extralight">FEATURED PROJECTS • FEATURED PROJECTS • FEATURED PROJECTS •
+            </span>
+        </div>
+    </div>
+
+    <!-- Project -->
+    <section class="grid grid-cols-3 px-4 gap-4 lg:px-[160px] py-24 " id="my-project-section">
+        <!-- Card 1 -->
+        <a href="#" class="relative group block overflow-hidden  project-card" data-aos="fade-up" data-aos-duration="600">
+            <img src="/public/Instagram post - 3.png" alt="Nama Project"
+                class="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-110">
+            <!-- Overlay -->
+            <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <!-- Container teks di bawah -->
+                <div class="absolute bottom-2 left-0 w-full flex justify-between items-center px-6 py-4 font-Jakarta">
+                    <h1 class="text-white text-lg font-semibold">POS MOBILE</h1>
+                    <h2 class="text-white text-lg font-semibold">VIEW PROJECT</h2>
+                </div>
+            </div>
+        </a>
+        <!-- Card 1 -->
+        <a href="#" class="relative group block overflow-hidden  project-card" data-aos="fade-up" data-aos-duration="1000">
+            <img src="/public/Instagram post - 5.png" alt="Nama Project"
+                class="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-110">
+            <!-- Overlay -->
+            <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <!-- Container teks di bawah -->
+                <div class="absolute bottom-2 left-0 w-full flex justify-between items-center px-6 py-4 font-Jakarta">
+                    <h1 class="text-white text-lg font-semibold">LEARN JAPANESE</h1>
+                    <h2 class="text-white text-lg font-semibold">VIEW PROJECT</h2>
+                </div>
+            </div>
+        </a>
+        <!-- Card 1 -->
+        <a href="#" class="relative group block overflow-hidden  project-card" data-aos="fade-up" data-aos-duration="1400">
+            <img src="/public/asfar.png" alt="Nama Project"
+                class="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-110">
+            <!-- Overlay -->
+            <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <!-- Container teks di bawah -->
+                <div class="absolute bottom-2 left-0 w-full flex justify-between items-center px-6 py-4 font-Jakarta">
+                    <h1 class="text-white text-lg font-semibold">SNEAKR</h1>
+                    <h2 class="text-white text-lg font-semibold">VIEW PROJECT</h2>
+                </div>
+            </div>
+        </a>
+        <!-- Card 1 -->
+        <a href="#" class="relative group block overflow-hidden  project-card" data-aos="fade-up" data-aos-duration="600">
+            <img src="/public/pwn.png" alt="Nama Project"
+                class="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-110">
+            <!-- Overlay -->
+            <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-100">
+                <!-- Container teks di bawah -->
+                <div class="absolute bottom-2 left-0 w-full flex justify-between items-center px-6 py-4 font-Jakarta">
+                    <h1 class="text-white text-lg font-semibold">PWN 2025</h1>
+                    <h2 class="text-white text-lg font-semibold">VIEW PROJECT</h2>
+                </div>
+            </div>
+        </a>
+        <!-- Card 1 -->
+        <a href="#" class="relative group block overflow-hidden  project-card"data-aos="fade-up" data-aos-duration="1000">
+            <img src="/public/jasmine-tea.png" alt="Nama Project"
+                class="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-110">
+            <!-- Overlay -->
+            <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <!-- Container teks di bawah -->
+                <div class="absolute bottom-2 left-0 w-full flex justify-between items-center px-6 py-4 font-Jakarta">
+                    <h1 class="text-white text-lg font-semibold">JASMINE TEA ORDER</h1>
+                    <h2 class="text-white text-lg font-semibold">VIEW PROJECT</h2>
+                </div>
+            </div>
+        </a>
+        <!-- Card 1 -->
+        <a href="/project/hasanah.html" class="relative group  block overflow-hidden  project-card"data-aos="fade-up" data-aos-duration="1400">
+            <img src="/public/Hasnah Kebab.png" alt="Nama Project"
+                class="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-110">
+            <!-- Overlay -->
+            <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <!-- Container teks di bawah -->
+                <div class="absolute bottom-2 left-0 w-full flex justify-between items-center px-6 py-4 font-Jakarta">
+                    <h1 class="text-white text-lg font-semibold">KEBAB | UMKM</h1>
+                    <h2 class="text-white text-lg font-semibold">VIEW PROJECT</h2>
+                </div>
+            </div>
+        </a>
+    </section>
+
+
+    <!-- Lets Talk -->
+    <section class=" lg:mb-24">
+        <div class="relative w-full lg:h-[554px] h-[300px] overflow-hidden bg-fixed bg-center bg-cover"
+            style="background-image: url('/public/bg-lest.png');">
+
+            <!-- Text -->
+            <div class="absolute inset-0 flex flex-col items-center justify-center px-4">
+                <h1 class="lg:text-[60px] text-[28px] font-bold text-white  mb-12 font-Jakarta lg:leading-[80px] leading-[32px] text-center"
+                    data-aos="fade-up" data-aos-duration="1000">
+                    Let's Start a Conversation to Make <br> Your Dream Ideas and Projects a Reality
+                </h1>
+                <a href="https://wa.me/6285860380645"
+                    class="bg-black/10 backdrop-blur-md border border-white/30 font-Jakarta text-base lg:text-2xl text-white lg:px-8 lg:py-4 px-4 py-2 rounded-full shadow hover:opacity-90 transition"
+                    data-aos="fade-up" data-aos-duration="1100">
+                    Contact Us
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Footer -->
+    <div class="grid lg:grid-cols-12 grid-cols-4 lg:py-44 py-12 items-center">
+        <!-- Logo -->
+        <div class="lg:col-span-7 col-span-4 flex justify-center  items-center">
+            <img src="/public/Logo.png" alt="Logo" class="lg:w-56 lg:h-56 w-24 h-24">
+            <span class="font-semibold lg:text-[32px] text-xl italic">uiux.byari</span>
+        </div>
+
+        <!-- List Menu -->
+        <div class="lg:col-span-5 flex  col-span-4 flex-col justify-between border-l">
+            <div class="flex flex-col divide-y font-Jakarta">
+                <a href="https://www.instagram.com/uiux.byari/"
+                    class="relative flex items-center gap-8 px-6 py-6 overflow-hidden group">
+                    <!-- Hover Background -->
+                    <span
+                        class="absolute top-0 left-0 w-full h-full lg:bg-white origin-top scale-y-0 transition-transform duration-500 ease-in-out group-hover:scale-y-100 z-0"></span>
+
+                    <!-- Content -->
+                    <span class="text-2xl text-[#717E95] relative z-10">01</span>
+                    <span class="font-bold lg:text-[40px] text-xl text-[#1B1B1B] relative z-10">Instagram</span>
+                </a>
+
+                <a href="https://www.linkedin.com/in/ari-saepuloh/"
+                    class="relative flex items-center gap-8 px-6 py-6 overflow-hidden group">
+                    <span
+                        class="absolute top-0 lg:left-0 w-full h-full lg:bg-white origin-top scale-y-0 transition-transform duration-500 ease-in-out group-hover:scale-y-100 z-0"></span>
+                    <span class="text-2xl text-[#717E95] relative z-10">02</span>
+                    <span class="font-bold lg:text-[40px] text-xl text-[#1B1B1B] relative z-10">Linkedin</span>
+                </a>
+
+                <a href="mailto:ariatenk315@gmail.com"
+                    class="relative flex items-center gap-8 px-6 py-6 overflow-hidden group">
+                    <span
+                        class="absolute top-0 left-0 w-full h-full lg:bg-white origin-top scale-y-0 transition-transform duration-500 ease-in-out group-hover:scale-y-100 z-0"></span>
+                    <span class="text-2xl text-[#717E95] relative z-10">03</span>
+                    <span class="font-bold lg:text-[40px] text-xl text-[#1B1B1B] relative z-10">Email</span>
+                </a>
+
+                <a href="/public/CV_ARI.pdf" class="relative flex items-center gap-8 px-6 py-6 overflow-hidden group">
+                    <span
+                        class="absolute top-0 left-0 w-full h-full lg:bg-white origin-top scale-y-0 transition-transform duration-500 ease-in-out group-hover:scale-y-100 z-0"></span>
+                    <span class="text-2xl text-[#717E95] relative z-10">03</span>
+                    <span class="font-bold lg:text-[40px] text-xl text-[#1B1B1B] relative z-10">CV</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Footer Copyright -->
+    <div class="font-Jakarta text-center mb-4 text-[#717E95] text-sm ">
+        Copyright © 2025 Ari Saepuloh
+    </div>
+
+
+
+
+
+
+
+
+    <script src="/src/project.js"></script>
+
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            once: true
+        });
+    </script>
+
+
+
+</body>
+
+</html>

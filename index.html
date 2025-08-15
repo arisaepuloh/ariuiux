@@ -1,0 +1,445 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="/dist/output.css" rel="stylesheet">
+  <!-- Font Plus Jakarta -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+    rel="stylesheet">
+  <!-- Font Serif -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Libertinus+Serif:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+    rel="stylesheet">
+  <!-- alpine -->
+  <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.js" defer></script>
+  <!-- link aos -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+
+<body class="scroll-smooth bg-[#F8F8F6]">
+
+  <nav x-data="{ open: false, atTop: true, scrollDirection: 'up', lastScroll: 0 }" @scroll.window="atTop = window.pageYOffset <= 50; 
+                     scrollDirection = (window.pageYOffset > lastScroll) ? 'down' : 'up'; 
+                     lastScroll = window.pageYOffset;"
+    class="px-4 lg:px-[160px] bg-[#F8F8F6] lg:py-6 py-4 flex items-center justify-between sticky top-0 z-[120] transition-transform duration-500 ease-in-out"
+    :class="(scrollDirection === 'up' || atTop) ? 'translate-y-0' : 'translate-y-[-100%]'">
+    <!-- Logo & Brand -->
+    <a href="home.html" class="flex items-center ">
+      <img src="/public/Logo.png" alt="Logo" class="lg:w-12 lg:h-12 w-8 h-8" />
+      <span class="font-semibold text-lg italic">uiux.byari</span>
+    </a>
+
+    <!-- Menu -->
+    <div class="hidden md:flex items-center space-x-8">
+      <a href="home.html"
+        :class="window.location.pathname.includes('home') ? 'font-bold text-black' : 'text-[#202120] font-medium hover:font-bold hover:text-black'"
+        class="font-Jakarta text-lg transition-all duration-100">
+        Home
+      </a>
+      <a href="project.html"
+        :class="window.location.pathname.includes('project') ? 'font-bold text-black' : 'text-[#202120] font-medium hover:font-bold hover:text-black'"
+        class="font-Jakarta text-lg transition-all duration-100">
+        My Project
+      </a>
+      <a href="404.html"
+        :class="window.location.pathname.includes('service') ? 'font-bold text-black' : 'text-[#202120] font-medium hover:font-bold hover:text-black'"
+        class="font-Jakarta text-lg transition-all duration-100">
+        Service
+      </a>
+    </div>
+
+    <!-- Contact Button -->
+    <a href="https://wa.me/6285860380645"
+      class="bg-[#202120] font-Jakarta text-base lg:text-2xl text-white lg:px-8 lg:py-4 px-4 py-2 rounded-full shadow hover:opacity-90 transition">
+      Contact Us
+    </a>
+  </nav>
+
+
+  <!-- Hero Section -->
+  <section
+    class="px-4 md:px-8 lg:px-[160px] lg:py-16 bg-[url('/public/bg-project.png')] bg-cover bg-center h-screen flex ">
+    <div class="w-full lg:flex justify-between">
+      <!-- text -->
+      <div class=" text-black mt-8 lg:mt-0">
+        <h1 class="md:text-[40px] lg:text-[40px] lg:px-4 font-Libaritus italic font-bold" data-aos="fade-up"
+          data-aos-duration="1000">Ari Saepuloh</h1>
+        <h6
+          class="lg:text-[200px] text-[60px] leading-[60px] font-Jakarta font-extrabold lg:leading-[200px] text-[#202120]"
+          data-aos="fade-up" data-aos-duration="1300">
+          UIUX <br> DESIGN</h6>
+      </div>
+
+      <!-- image -->
+      <div id="wrapper"
+        class="mt-8 lg:mt-0 group w-fit  overflow-hidden relative transition-transform duration-300 ease-in-out animate-[float_3s_ease-in-out_infinite]">
+        <img id="image" src="/public/img-section.png" alt="Hero Image"
+          class="lg:w-[450px] lg:h-[600px] w-full h-full transition-transform duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] animate-float" />
+      </div>
+    </div>
+
+  </section>
+
+  <!-- content 1 -->
+  <section class="px-6 lg:px-[160px] lg:-mt-64 -mt-16 ">
+    <div class=" grid lg:grid-cols-12 grid-cols-4 justify-between">
+      <div class="col-span-4 hidden lg:block">
+        <h1 class="lg:text-[60px] text-2xl font-bold font-Libaritus italic text-[#202120]" data-aos="fade-up"
+          data-aos-duration="1000">30+ Project</h1>
+      </div>
+      <div
+        class="lg:col-span-8 col-span-4 font-Jakarta lg:text-xl text-base text-[#717E95] lg:leading-[32px] justify-end"
+        data-aos="fade-up" data-aos-duration="1300">
+        <h6 class="lg:text-end text-start block ">I'm a dedicated UI/UX designer with over two years of experience in
+          the field. My
+          name is Ari Saepuloh, a
+          vocational school graduate majoring in Software Engineering. My journey in the design world began while I was
+          still in school, where I actively worked as a UI/UX designer both full-time and freelance.
+        </h6>
+      </div>
+    </div>
+  </section>
+
+  <!-- content 2-->
+  <section class="px-6 lg:px-[160px] lg:mb-24 mb-6 lg:mt-12 mt-6">
+    <div class=" grid lg:grid-cols-12 grid-cols-4 justify-between">
+      <div
+        class="lg:col-span-8 col-span-4 font-Jakarta lg:text-xl text-base text-[#717E95] lg:leading-[32px] justify-start"
+        data-aos="fade-up" data-aos-duration="1300">
+        <h6 class="text-start block ">With a background in Software Engineering, I have a strong understanding of the
+          technical workflow in application development. This helps me create designs that are not only aesthetically
+          pleasing, but also efficient, functional, and realistic to implement. For me, design is a combination of
+          research, user empathy, and collaboration with the development team.
+        </h6>
+      </div>
+      <div class="col-span-4 hidden lg:block">
+        <h1 class="lg:text-[60px] text-2xl block font-bold font-Libaritus italic text-[#202120] text-end"
+          data-aos="fade-up" data-aos-duration="1000">10+ Klien</h1>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Konten project -->
+  <section id="cursor-custem" class="flex items-center justify-center lg:mb-24 bg-gray-100 cursor-none">
+    <div class="w-full lg:h-[400px]  h-[200px] overflow-hidden  relative">
+      <div id="custom-cursor"
+        class="absolute w-28 h-28 md:w-24 md:h-24 bg-black/40 backdrop-blur-md border border-white/30 rounded-full flex items-center justify-center font-bold text-white x pointer-events-none opacity-0 scale-90 transition-all duration-300 ease-out shadow-lg z-10">
+        View
+      </div>
+      <div id="slider" class="flex w-max">
+        <!-- Ganti src dengan gambar kamu -->
+        <div class="w-[200px] h-[200px] lg:w-[400px] lg:h-[400px]  flex-shrink-0">
+          <img src="/public/asfar.png" loading="lazy" class="w-full h-full object-cover" />
+        </div>
+        <div class="w-[200px] h-[200px] lg:w-[400px] lg:h-[400px] flex-shrink-0">
+          <img src="/public/Hasnah Kebab.png" loading="lazy" class="w-full h-full object-cover" />
+        </div>
+        <div class="w-[200px] h-[200px] lg:w-[400px] lg:h-[400px] flex-shrink-0">
+          <img src="/public/Instagram post - 3.png" loading="lazy" class="w-full h-full object-cover" />
+        </div>
+        <div class="w-[200px] h-[200px] lg:w-[400px] lg:h-[400px] flex-shrink-0">
+          <img src="/public/pwn.png" loading="lazy" class="w-full h-full object-cover" />
+        </div>
+        <div class="w-[200px] h-[200px] lg:w-[400px] lg:h-[400px] flex-shrink-0">
+          <img src="/public/Instagram post - 5.png" loading="lazy" class="w-full h-full object-cover" />
+        </div>
+        <!-- Looping -->
+        <div class="w-[200px] h-[200px] lg:w-[400px] lg:h-[400px] flex-shrink-0">
+          <img src="/public/asfar.png" loading="lazy" class="w-full h-full object-cover" />
+        </div>
+        <div class="w-[200px] h-[200px] lg:w-[400px] lg:h-[400px] flex-shrink-0">
+          <img src="/public/Hasnah Kebab.png" loading="lazy" class="w-full h-full object-cover" />
+        </div>
+        <div class="w-[200px] h-[200px] lg:w-[400px] lg:h-[400px] flex-shrink-0">
+          <img src="/public/Instagram post - 3.png" loading="lazy" class="w-full h-full object-cover" />
+        </div>
+        <div class="w-[200px] h-[200px] lg:w-[400px] lg:h-[400px] flex-shrink-0">
+          <img src="/public/pwn.png" loading="lazy" class="w-full h-full object-cover" />
+        </div>
+        <div class="w-[200px] h-[200px] lg:w-[400px] lg:h-[400px] flex-shrink-0">
+          <img src="/public/Instagram post - 5.png" loading="lazy" class="w-full h-full object-cover" />
+        </div>
+  </section>
+
+
+  <!-- Portfolio -->
+  <section id="portfolio" class="lg:px-[160px] px-4 lg:my-24 mt-6 scroll-smooth">
+    <div class="grid lg:grid-cols-12 grid-cols-4 text-[#202120]">
+      <div class="lg:col-span-7 col-span-4 items-end">
+        <h1
+          class="lg:text-[60px] text-[28px] font-Jakarta font-bold lg:leading-[72px] leading-[32px] scrollText text-[#202120] transition-colors duration-1000">
+          My footsteps in developing <br> digital design skills</h1>
+      </div>
+      <div class="lg:col-span-5 col-span-4 lg:mt-20 justify-end text-end border-spacing-1 border-blue-300 mt-4 ">
+        <h1 class="lg:text-lg text-sm font-Jakarta leading-tight text-end lg:justify-end">A quick note on how I
+          gradually grew <br> in the world of UI/UX</h1>
+      </div>
+    </div>
+
+    <!-- pengalaman Pt Bengkel aplikasi -->
+    <div
+      class="lg:hover:bg-white bg-white lg:bg-[#F8F8F6] cursor-pointer lg:hover:px-6 px-4 lg:px-0 lg:py-0 lg:hover:py-4 py-4 transition-all duration-1000 grid lg:grid-cols-12 grid-cols-4 lg:mt-24 mt-8 items-center text-[#202120]">
+      <div class="col-span-7 flex flex-col">
+        <h1 class="lg:text-[32px] text-lg font-Jakarta font-bold leading-tight">Internship at PT. Bengkel Aplikasi
+          Nusantara
+        </h1>
+        <p class="lg:text-lg text-[#717E95] text-sm font-Jakarta leading-tight mt-4">During my internship, I had the
+          opportunity to learn the fundamentals of UI/UX design, including <br> understanding the digital design
+          workflow, creating wireframes, and using design tools.</p>
+      </div>
+      <div class="col-span-5">
+        <h1 class="lg:text-[56px] text-2xl font-Jakarta font-bold justify-end text-end lg:mt-0 mt-4">2023</h1>
+      </div>
+    </div>
+    <div class="h-0.5 w-full bg-[#F5F5F5] mt-4"></div>
+    <!-- pengalaman RZF -->
+    <div
+      class="lg:hover:bg-white bg-white lg:bg-[#F8F8F6] cursor-pointer lg:hover:px-6 px-4 lg:px-0 lg:py-0 lg:hover:py-4 py-4 transition-all duration-1000 grid lg:grid-cols-12 grid-cols-4 lg:mt-24 mt-8 items-center text-[#202120]">
+      <div class="col-span-7 flex flex-col">
+        <h1 class="lg:text-[32px] text-lg font-Jakarta font-bold leading-tight "> UI/UX Designer & RnD at RZF
+          Software
+        </h1>
+        <p class="lg:text-lg text-[#717E95] text-sm font-Jakarta leading-tight mt-4">Responsible for research and
+          development of digital products, managing UI/UX projects from planning to implementation.</p>
+      </div>
+      <div class="col-span-5">
+        <h1 class="lg:text-[56px] text-2xl font-Jakarta font-bold justify-end text-end lg:mt-0 mt-4">2024 - Now
+        </h1>
+      </div>
+    </div>
+    <div class="h-0.5 w-full bg-[#F5F5F5] mt-4"></div>
+    <!-- pengalaman Frelance -->
+    <div
+      class="lg:hover:bg-white bg-white lg:bg-[#F8F8F6] cursor-pointer lg:hover:px-6 px-4 lg:px-0 lg:py-0 lg:hover:py-4 py-4 transition-all duration-1000 grid lg:grid-cols-12 grid-cols-4 lg:mt-24 mt-8 items-center text-[#202120]">
+      <div class="col-span-7 flex flex-col">
+        <h1 class="lg:text-[32px] text-lg font-Jakarta font-bold leading-tight "> UI/UX Designer at Freelance
+        </h1>
+        <p class="lg:text-lg text-[#717E95] text-sm font-Jakarta leading-tight mt-4">Designing functional and aesthetic
+          digital interfaces for various clients, while enhancing my ability to work independently.</p>
+      </div>
+      <div class="col-span-5">
+        <h1 class="lg:text-[56px] text-2xl font-Jakarta font-bold justify-end text-end lg:mt-0 mt-4">2025 - Now
+        </h1>
+      </div>
+    </div>
+    <div class="h-0.5 w-full bg-[#EEF2F8] mt-4"></div>
+  </section>
+
+  <!-- Skills Section -->
+  <section class="bg-white py-16 px-4 text-center">
+    <h2 class="lg:text-[60px] text-[28px] font-bold text-[#202120] mb-12 font-Jakarta lg:leading-[72px] leading-[32px]"
+      data-aos="fade-up" data-aos-duration="900">
+      Technical & Creative Skills for <br /> Digital Design Solutions
+    </h2>
+
+    <div class="flex flex-wrap justify-center lg:gap-10 gap-4 max-w-[1140px] mx-auto font-Jakarta" data-aos="fade-up" data-aos-duration="900">
+      <span
+        class="shake-on-hover border-[#717E95] border cursor-pointer text-[#717E95] rounded-full lg:px-8 lg:py-4 px-4 py-2 text-base lg:text-xl lg:translate-y-4 lg:-rotate-3">Wireframe</span>
+      <span class="shake-on-hover border-[#717E95] border cursor-pointer text-[#717E95] rounded-full lg:px-8 lg:py-4 px-4 py-2 text-base lg:text-xl lg:-translate-y-2 lg:rotate-2">User
+        Research</span>
+      <span
+        class="shake-on-hover border-[#717E95] border cursor-pointer text-[#717E95] rounded-full lg:px-8 lg:py-4 px-4 py-2 text-base lg:text-xl lg:translate-y-6 lg:rotate-1">Figma</span>
+      <span class="shake-on-hover border-[#717E95] border cursor-pointer text-[#717E95] rounded-full lg:px-8 lg:py-4 px-4 py-2 text-base lg:text-xl lg:-translate-y-3 lg:-rotate-2">Design
+        System</span>
+      <span
+        class="shake-on-hover border-[#717E95] border cursor-pointer text-[#717E95] rounded-full lg:px-8 lg:py-4 px-4 py-2 text-base lg:text-xl lg:translate-y-5 lg:rotate-1">Prototype</span>
+      <span class="shake-on-hover border-[#717E95] border cursor-pointer text-[#717E95] rounded-full lg:px-8 lg:py-4 px-4 py-2 text-base lg:text-xl lg:-translate-y-4 lg:rotate-3">Design
+        Thinking</span>
+      <span class="shake-on-hover border-[#717E95] border cursor-pointer text-[#717E95] rounded-full lg:px-8 lg:py-4 px-4 py-2 text-base lg:text-xl lg:translate-y-7 lg:-rotate-2">Flow
+        Chart</span>
+      <span class="shake-on-hover border-[#717E95] border cursor-pointer text-[#717E95] rounded-full lg:px-8 lg:py-4 px-4 py-2 text-base lg:text-xl lg:-translate-y-1 lg:rotate-2">Design
+        Web</span>
+      <span class="shake-on-hover border-[#717E95] border cursor-pointer text-[#717E95] rounded-full lg:px-8 lg:py-4 px-4 py-2 text-base lg:text-xl lg:translate-y-6 lg:-rotate-1">Design
+        App</span>
+      <span
+        class="shake-on-hover border-[#717E95] border cursor-pointer text-[#717E95] rounded-full lg:px-8 lg:py-4 px-4 py-2 text-base lg:text-xl lg:-translate-y-3 lg:rotate-3">Javascript
+        (Base)</span>
+      <span class="shake-on-hover border-[#717E95] border cursor-pointer text-[#717E95] rounded-full lg:px-8 lg:py-4 px-4 py-2 text-base lg:text-xl lg:translate-y-5 lg:-rotate-2">Laravel
+        (Base)</span>
+      <span
+        class="shake-on-hover border-[#717E95] border cursor-pointer text-[#717E95] rounded-full lg:px-8 lg:py-4 px-4 py-2 text-base lg:text-xl lg:-translate-y-2 lg:rotate-1">Tailwind</span>
+      <span
+        class="shake-on-hover border-[#717E95] border cursor-pointer text-[#717E95] rounded-full lg:px-8 lg:py-4 px-4 py-2 text-base lg:text-xl lg:translate-y-4 lg:rotate-2">Html</span>
+    </div>
+  </section>
+
+  <!-- Marquee -->
+  <div class="overflow-hidden bg-black py-2 whitespace-nowrap relative z-[80]">
+    <div class="marquee-content flex gap-6 text-white font-semibold text-lg">
+      <!-- Konten akan diduplikasi via JS -->
+      <span>Web Design ✷</span>
+      <span>App Design ✷</span>
+      <span>Dashboard ✷</span>
+      <span>Wireframe ✷</span>
+      <span>Web Design ✷</span>
+      <span>App Design ✷</span>
+      <span>Dashboard ✷</span>
+      <span>Wireframe ✷</span>
+      <span>Web Design ✷</span>
+      <span>App Design ✷</span>
+      <span>Dashboard ✷</span>
+      <span>Wireframe ✷</span>
+      <span>Web Design ✷</span>
+      <span>App Design ✷</span>
+      <span>Dashboard ✷</span>
+      <span>Wireframe ✷</span>
+      <span>Web Design ✷</span>
+      <span>App Design ✷</span>
+      <span>Dashboard ✷</span>
+      <span>Wireframe ✷</span>
+    </div>
+  </div>
+
+  <!-- Expertise -->
+  <div class="px-4 lg:my-24 py-12 md:px-8 lg:px-[160x]  relative z-[80]">
+    <div class="container mx-auto">
+
+      <!-- Hedline -->
+      <div class="flex flex-col text-start">
+        <h1
+          class="lg:text-[60px] text-[28px] font-bold text-[#202120] mb-12 font-Jakarta lg:leading-[72px] leading-[32px]"
+          data-aos="fade-up" data-aos-duration="900">My Role in the Digital World</h1>
+      </div>
+
+      <!-- Card -->
+      <div class="grid grid-cols-4 lg:grid lg:grid-cols-12 gap-8 lg:gap-12 mt-4 lg:mt-[44px]">
+        <div class="col-span-4 lg:col-span-6 flex flex-col gap-4 lg:">
+          <h1 class="lg:text-[32px] text-xl font-Jakarta font-semibold" data-aos="fade-up" data-aos-duration="900">UI
+            DESIGN</h1>
+          <p class="text-[14px] lg:text-lg text-[#717E95] font-Jakarta font-normal " data-aos="fade-up"
+            data-aos-duration="1000">Interface design focuses on the visual appearance and ease of use of the
+            application. From colors and icons to layout, we create an engaging user experience.</p>
+        </div>
+        <div class="col-span-4 lg:col-span-6 flex flex-col gap-4 lg:">
+          <h1 class="lg:text-[32px] text-xl font-Jakarta font-semibold" data-aos="fade-up" data-aos-duration="900">UX
+            DESIGN</h1>
+          <p class="text-[14px] lg:text-lg text-[#717E95] font-Jakarta font-normal " data-aos="fade-up"
+            data-aos-duration="1000">User experience design ensures intuitive and comfortable interactions. We optimize
+            the process from start to finish to maximize user satisfaction.
+          </p>
+        </div>
+      </div>
+      <div class="grid grid-cols-4 lg:grid lg:grid-cols-12 gap-8 lg:gap-12 mt-4 lg:mt-[44px]">
+        <div class="col-span-4 lg:col-span-6 flex flex-col gap-4 lg:">
+          <h1 class="lg:text-[32px] text-xl font-Jakarta font-semibold" data-aos="fade-up" data-aos-duration="900">
+            GRAPHIC
+            DESIGN</h1>
+          <p class="text-[14px] lg:text-lg text-[#717E95] font-Jakarta font-normal " data-aos="fade-up"
+            data-aos-duration="1000">Visual creations that include logos, illustrations, and other visual content.
+            We create designs that reflect brand identity and capture audience attention.</p>
+        </div>
+        <div class="col-span-4 lg:col-span-6 flex flex-col gap-4 lg:">
+          <h1 class="lg:text-[32px] text-xl font-Jakarta font-semibold" data-aos="fade-up" data-aos-duration="900">
+            FRONTEND
+            WEB</h1>
+          <p class="text-[14px] lg:text-lg text-[#717E95] font-Jakarta font-normal " data-aos="fade-up"
+            data-aos-duration="1000">
+            Frontend web development focuses on creating user-friendly and responsive web interfaces. While I may not be
+            an expert, I understand the basics of HTML, CSS, and JavaScript to create functional and visually appealing
+            web pages.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Lets Talk -->
+  <section class=" lg:mb-24">
+    <div class="relative w-full lg:h-[554px] h-[300px] overflow-hidden bg-fixed bg-center bg-cover"
+      style="background-image: url('/public/bg-lest.png');">
+
+      <!-- Text -->
+      <div class="absolute inset-0 flex flex-col items-center justify-center px-4">
+        <h1
+          class="lg:text-[60px] text-[28px] font-bold text-white  mb-12 font-Jakarta lg:leading-[80px] leading-[32px] text-center"
+          data-aos="fade-up" data-aos-duration="1000">
+          Let's Start a Conversation to Make <br> Your Dream Ideas and Projects a Reality
+        </h1>
+        <a href="https://wa.me/6285860380645"
+          class="bg-black/10 backdrop-blur-md border border-white/30 font-Jakarta text-base lg:text-2xl text-white lg:px-8 lg:py-4 px-4 py-2 rounded-full shadow hover:opacity-90 transition"
+          data-aos="fade-up" data-aos-duration="1100">
+          Contact Us
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Footer -->
+  <div class="grid lg:grid-cols-12 grid-cols-4 lg:py-44 py-12 items-center">
+    <!-- Logo -->
+    <div class="lg:col-span-7 col-span-4 flex justify-center  items-center">
+      <img src="/public/Logo.png" alt="Logo" class="lg:w-56 lg:h-56 w-24 h-24">
+      <span class="font-semibold lg:text-[32px] text-xl italic">uiux.byari</span>
+    </div>
+
+    <!-- List Menu -->
+    <div class="lg:col-span-5 flex  col-span-4 flex-col justify-between border-l">
+      <div class="flex flex-col divide-y font-Jakarta">
+        <a href="https://www.instagram.com/uiux.byari/"
+          class="relative flex items-center gap-8 px-6 py-6 overflow-hidden group">
+          <!-- Hover Background -->
+          <span
+            class="absolute top-0 left-0 w-full h-full lg:bg-white origin-top scale-y-0 transition-transform duration-500 ease-in-out group-hover:scale-y-100 z-0"></span>
+
+          <!-- Content -->
+          <span class="text-2xl text-[#717E95] relative z-10">01</span>
+          <span class="font-bold lg:text-[40px] text-xl text-[#1B1B1B] relative z-10">Instagram</span>
+        </a>
+
+        <a href="https://www.linkedin.com/in/ari-saepuloh/"
+          class="relative flex items-center gap-8 px-6 py-6 overflow-hidden group">
+          <span
+            class="absolute top-0 lg:left-0 w-full h-full lg:bg-white origin-top scale-y-0 transition-transform duration-500 ease-in-out group-hover:scale-y-100 z-0"></span>
+          <span class="text-2xl text-[#717E95] relative z-10">02</span>
+          <span class="font-bold lg:text-[40px] text-xl text-[#1B1B1B] relative z-10">Linkedin</span>
+        </a>
+
+        <a href="mailto:ariatenk315@gmail.com" class="relative flex items-center gap-8 px-6 py-6 overflow-hidden group">
+          <span
+            class="absolute top-0 left-0 w-full h-full lg:bg-white origin-top scale-y-0 transition-transform duration-500 ease-in-out group-hover:scale-y-100 z-0"></span>
+          <span class="text-2xl text-[#717E95] relative z-10">03</span>
+          <span class="font-bold lg:text-[40px] text-xl text-[#1B1B1B] relative z-10">Email</span>
+        </a>
+
+        <a href="/public/CV_ARI.pdf" class="relative flex items-center gap-8 px-6 py-6 overflow-hidden group">
+          <span
+            class="absolute top-0 left-0 w-full h-full lg:bg-white origin-top scale-y-0 transition-transform duration-500 ease-in-out group-hover:scale-y-100 z-0"></span>
+          <span class="text-2xl text-[#717E95] relative z-10">03</span>
+          <span class="font-bold lg:text-[40px] text-xl text-[#1B1B1B] relative z-10">CV</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Footer Copyright -->
+  <div class="font-Jakarta text-center mb-4 text-[#717E95] text-sm ">
+    Copyright © 2025 Ari Saepuloh
+  </div>
+
+
+
+
+
+
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      once: true
+    });
+  </script>
+
+  <script src="/src/main.js"></script>
+
+</body>
+
+</html>
