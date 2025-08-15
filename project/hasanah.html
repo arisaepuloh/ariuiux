@@ -31,10 +31,10 @@
         class="px-4 lg:px-[160px] lg:py-6 py-4 bg-[#F8F8F6] bg-wh flex items-center justify-between sticky top-0 z-[120] transition-transform duration-500 ease-in-out"
         :class="(scrollDirection === 'up' || atTop) ? 'translate-y-0' : 'translate-y-[-100%]'">
         <div class="flex items-start space-x-8 gap-4 hover:scale-110">
-            <a href="project.html"
+            <a href="/project.html"
                 :class="window.location.pathname.includes('home') ? 'font-bold text-black' : 'text-[#202120] font-medium hover:font-bold hover:text-black'"
                 class="font-Jakarta text-lg transition-all duration-100 flex gap-2 items-center">
-                <img src="public/arrow-left.png" alt="" class="w-6 h-6 ">
+                <img src="/public/arrow-left.png" alt="" class="w-6 h-6 ">
                 Back
             </a>
 
@@ -43,25 +43,25 @@
 
 
     <!-- Hero Section -->
-    <section class="px-4 lg:px-[160px] items-center bg-[url('public/bg-project.png')] bg-cover bg-center py-12 mb-24">
+    <section class="px-4 lg:px-[160px] items-center bg-[url('/public/bg-project.png')] bg-cover bg-center py-12 mb-24">
         <div class="w-full">
-            <img src="public/Project/kebab.png" alt="" class="w-full h-auto" data-aos="fade-up" data-aos-duration="900">
+            <img src="/public/Project/kebab.png" alt="" class="w-full h-auto" data-aos="fade-up" data-aos-duration="900">
         </div>
 
         <div class="flex flex-col justify-start font-Jakarta mt-8">
             <div class="">
-                <h1 class="text-[44px] font-bold text-[#202120]" data-aos="fade-up" data-aos-duration="1000">Hasanah Kebab – Website UMKM</h1>
+                <h1 class="lg:text-[44px] text-[32px] font-bold text-[#202120]" data-aos="fade-up" data-aos-duration="1000">Hasanah Kebab – Website UMKM</h1>
                 <h3 class="italic text-[16px] text-[#717E95]"data-aos="fade-up" data-aos-duration="1100">Role: UI/UX Designer</h3>
             </div>
-            <div class="flex flex-col gap-8">
-                <h1 class="mt-12 text-2xl text-[#202120] leading-[40px] font-Jakarta font-medium " data-aos="fade-up" data-aos-duration="1000">This project is a
+            <div class="flex flex-col lg:gap-8 gap-4">
+                <h1 class="mt-12 lg:text-2xl text-base text-[#202120] lg:leading-[40px] leading-[30px] font-Jakarta font-medium " data-aos="fade-up" data-aos-duration="1000">This project is a
                     user interface and user experience design for the Hasanah Kebab MSME website,
                     a local kebab brand aiming to strengthen its identity in the digital space.
                     The design goal is to present a modern, professional, and responsive look, while still
                     maintaining a warm and appetizing feel that matches the product’s character.</h1>
-                <h2 class=" text-2xl text-[#202120] leading-[40px] font-Jakarta font-medium" data-aos="fade-up" data-aos-duration="1000">During the design :</h2>
+                <h2 class=" lg:text-2xl text-base text-[#202120] leading-[40px] font-Jakarta font-medium" data-aos="fade-up" data-aos-duration="1000">During the design :</h2>
                 <ul
-                    class="list-disc list-inside text-2xl text-[#202120] leading-[40px] font-Jakarta font-medium gap-2 flex flex-col" data-aos="fade-up" data-aos-duration="1000">
+                    class="list-disc list-inside lg:text-2xl text-[#202120] lg:leading-[40px] text-base leading-[30px] font-Jakarta font-medium gap-2 flex flex-col" data-aos="fade-up" data-aos-duration="1000">
                     <li>Research & Analysis: Understanding the target user profile and MSME business needs.</li>
                     <li>Wireframe & Layout: Creating a simple and easy-to-navigate page structure.</li>
                     <li>Visual Design: Using the brand’s signature colors (red & yellow) to build visual identity
@@ -69,12 +69,12 @@
                     <li>Responsive: Ensuring an optimal experience across various devices (desktop & mobile).</li>
                     <li>Product Focus: Highlighting large product photos and clear call-to-actions
             </div>
-            <div class="flex mt-8 font-Jakarta gap-4">
+            <div class="flex lg:mt-8 mt-4 font-Jakarta gap-4">
                 <a href="404.html"
-                    class="shake-on-hover border-[#717E95] border cursor-pointer text-[#717E95] rounded-full lg:px-8 lg:py-4 px-4 py-2 text-2xl " data-aos="fade-up" data-aos-duration="1000">Study
+                    class="shake-on-hover border-[#717E95] border cursor-pointer text-[#717E95] rounded-full lg:px-8 lg:py-4 px-4 py-2 lg:text-2xl text-base" data-aos="fade-up" data-aos-duration="1000">Study
                     Case</a>
                 <a href="https://www.hasanahkebab.com/"
-                    class="shake-on-hover border-[#717E95] border cursor-pointer text-[#717E95] rounded-full lg:px-8 lg:py-4 px-4 py-2 text-2xl " data-aos="fade-up" data-aos-duration="1000">View
+                    class="shake-on-hover border-[#717E95] border cursor-pointer text-[#717E95] rounded-full lg:px-8 lg:py-4 px-4 py-2 lg:text-2xl text-base" data-aos="fade-up" data-aos-duration="1000">View
                     Website</a>
             </div>
         </div>
@@ -87,7 +87,7 @@
 
             <!-- Text -->
             <div class="absolute inset-0 flex flex-col items-center justify-center px-4">
-                <h1 class="lg:text-[60px] text-[28px] font-bold text-white  mb-12 font-Jakarta lg:leading-[80px] leading-[32px] text-center"
+                <h1 class="lg:text-[60px] text-[28px] font-bold text-white  lg:mb-12 mb-4 font-Jakarta lg:leading-[80px] leading-[32px] text-center"
                     data-aos="fade-up" data-aos-duration="1000">
                     Let's Start a Conversation to Make <br> Your Dream Ideas and Projects a Reality
                 </h1>
@@ -104,7 +104,7 @@
     <div class="grid lg:grid-cols-12 grid-cols-4 lg:py-44 py-12 items-center">
         <!-- Logo -->
         <div class="lg:col-span-7 col-span-4 flex justify-center  items-center">
-            <img src="public/Logo.png" alt="Logo" class="lg:w-56 lg:h-56 w-24 h-24">
+            <img src="/public/Logo.png" alt="Logo" class="lg:w-56 lg:h-56 w-24 h-24">
             <span class="font-semibold lg:text-[32px] text-xl italic">uiux.byari</span>
         </div>
 
@@ -138,7 +138,7 @@
                     <span class="font-bold lg:text-[40px] text-xl text-[#1B1B1B] relative z-10">Email</span>
                 </a>
 
-                <a href="public/CV_ARI.pdf" class="relative flex items-center gap-8 px-6 py-6 overflow-hidden group">
+                <a href="/public/CV_ARI.pdf" class="relative flex items-center gap-8 px-6 py-6 overflow-hidden group">
                     <span
                         class="absolute top-0 left-0 w-full h-full lg:bg-white origin-top scale-y-0 transition-transform duration-500 ease-in-out group-hover:scale-y-100 z-0"></span>
                     <span class="text-2xl text-[#717E95] relative z-10">03</span>
