@@ -125,3 +125,55 @@ function smoothScroll() {
     requestAnimationFrame(smoothScroll);
   }
 }
+
+
+// Testimoni
+const testimonials = {
+    erawan: {
+        jobdesk: "Fullstack Dev",
+        text: `“Ari Saepuloh is a UI/UX designer with a keen understanding of user needs. He can simplify complex ideas into intuitive, engaging, and user-friendly designs. His work is meticulously detailed, balances aesthetics and function, and often exceeds expectations. Working with him truly enhances every project.”`
+    },
+    hisyam: {
+        jobdesk: "Frontend Developer",
+        text: `“Working with Ari was a game changer. His designs make development much faster because everything is well structured and intuitive. It really improves the user experience.”`
+    },
+    jafar: {
+        jobdesk: "Product Manager",
+        text: `“Ari understands not only design but also business goals. His solutions always balance user needs with business value. A pleasure to collaborate with.”`
+    }
+};
+
+// ambil elemen
+const buttons = document.querySelectorAll(".testimonial-btn");
+const jobdeskEl = document.getElementById("jobdesk");
+const testimonialEl = document.getElementById("testimonial");
+
+// fungsi update tampilan
+function showTestimonial(name) {
+    // reset active state
+    buttons.forEach(btn => {
+        btn.classList.remove("text-gray-900", "underline", "border-black");
+        btn.classList.add("text-gray-500");
+    });
+
+    // aktifkan tombol yg diklik
+    const activeBtn = document.querySelector(`[data-name="${name}"]`);
+    activeBtn.classList.remove("text-gray-500");
+    activeBtn.classList.add("text-gray-900", "underline", "border-black");
+
+    // tampilkan jobdesk & teks
+    jobdeskEl.textContent = testimonials[name].jobdesk;
+    jobdeskEl.classList.remove("hidden");
+    testimonialEl.textContent = testimonials[name].text;
+}
+
+// event listener
+buttons.forEach(btn => {
+    btn.addEventListener("click", () => {
+        const name = btn.getAttribute("data-name");
+        showTestimonial(name);
+    });
+});
+
+// tampilkan default pertama
+showTestimonial("erawan");

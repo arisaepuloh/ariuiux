@@ -30,6 +30,29 @@ projectWrapper.addEventListener("mouseleave", () => {
 
 
 
-// Marquee
-const marquee = document.getElementById("marquee");
-marquee.style.animation = "marquee 100s linear infinite";
+
+// Testimoni
+document.addEventListener("DOMContentLoaded", () => {
+    const buttons = document.querySelectorAll("[data-id]");
+    const testimonials = document.querySelectorAll(".testimonial");
+
+    buttons.forEach((btn) => {
+        btn.addEventListener("click", () => {
+            // Reset semua button
+            buttons.forEach(b => b.classList.remove("border-b", "pb-1", "text-black"));
+            buttons.forEach(b => b.classList.add("text-gray-500"));
+
+            // Sembunyikan semua testimoni
+            testimonials.forEach(t => t.classList.add("hidden"));
+            testimonials.forEach(t => t.classList.remove("active"));
+
+            // Aktifkan button & testimoni sesuai klik
+            btn.classList.add("border-b", "pb-1", "text-black");
+            btn.classList.remove("text-gray-500");
+
+            const id = btn.getAttribute("data-id");
+            document.getElementById(id).classList.remove("hidden");
+            document.getElementById(id).classList.add("active");
+        });
+    });
+});
