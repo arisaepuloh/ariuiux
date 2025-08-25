@@ -1,0 +1,192 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/dist/output.css" rel="stylesheet">
+    </link>
+    <!-- Font Plus Jakarta -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+        rel="stylesheet">
+    <!-- Font Serif -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Libertinus+Serif:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+        rel="stylesheet">
+    <!-- alpine -->
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.js" defer></script>
+    <!-- link aos -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+
+<body class="scroll-smooth bg-[#F8F8F6]">
+
+    <nav x-data="{ open: false, atTop: true, scrollDirection: 'up', lastScroll: 0 }" @scroll.window="atTop = window.pageYOffset <= 50; 
+                     scrollDirection = (window.pageYOffset > lastScroll) ? 'down' : 'up'; 
+                     lastScroll = window.pageYOffset;"
+        class="px-4 lg:px-[160px] lg:py-6 py-4 bg-[#F8F8F6] bg-wh flex items-center justify-between sticky top-0 z-[120] transition-transform duration-500 ease-in-out"
+        :class="(scrollDirection === 'up' || atTop) ? 'translate-y-0' : 'translate-y-[-100%]'">
+        <div class="flex items-start space-x-8 gap-4 hover:scale-110">
+            <a href="../project.html"
+                :class="window.location.pathname.includes('home') ? 'font-bold text-black' : 'text-[#202120] font-medium hover:font-bold hover:text-black'"
+                class="font-Jakarta text-lg transition-all duration-100 flex gap-2 items-center">
+                <img src="/public/arrow-left.png" alt="" class="w-6 h-6 ">
+                Back
+            </a>
+        </div>
+    </nav>
+
+
+    <!-- Hero Section -->
+    <section class="px-4 lg:px-[160px] items-center bg-[url('/public/bg-project.png')] bg-cover bg-center py-12 mb-24">
+        <div class="w-full">
+            <img src="/public/Project/pos-project.png" alt="" class="w-full h-auto" data-aos="fade-up"
+                data-aos-duration="900">
+        </div>
+
+        <div class="flex flex-col justify-start font-Jakarta mt-8">
+            <div class="">
+                <h1 class="lg:text-[44px] text-[32px] font-bold text-[#202120]" data-aos="fade-up"
+                    data-aos-duration="1000">APP POS Mobile Offline</h1>
+                <h3 class="italic text-[16px] text-[#717E95]" data-aos="fade-up" data-aos-duration="1100">Role:
+                    UI/UX Designer, Project Management</h3>
+            </div>
+            <div class="flex flex-col lg:gap-8 gap-4">
+                <h1 class="mt-12 lg:text-2xl text-base text-[#202120] lg:leading-[40px] leading-[30px] font-Jakarta font-medium "
+                    data-aos="fade-up" data-aos-duration="1000">
+                    This project is the development of an offline POS Mobile application aimed at small-scale MSMEs. The
+                    application is designed to be usable even without an internet connection, making it easier for
+                    merchants to record sales and purchase transactions, as well as manage simple financial reports.
+                </h1>
+                <h2 class=" lg:text-2xl text-base text-[#202120] leading-[40px] font-Jakarta font-medium"
+                    data-aos="fade-up" data-aos-duration="1000">
+                    During the design process:
+                </h2>
+                <ul class="list-disc list-inside lg:text-2xl text-[#202120] lg:leading-[40px] text-base leading-[30px] font-Jakarta font-medium gap-2 flex flex-col"
+                    data-aos="fade-up" data-aos-duration="1000">
+                    <li>Research & Requirement Gathering → Understanding the needs of MSME actors and their obstacles in
+                        using POS systems.</li>
+                    <li>Design System → Creating guidelines for colors, typography, icons, and components to ensure
+                        consistent design.</li>
+                    <li>Wireframe & User Flow → Designing simple and easy-to-understand interaction flows.</li>
+                    <li>High Fidelity Prototype → Creating interactive final screens for user testing before
+                        development.</li>
+                    <li>Usability Testing → Conducting simple tests to ensure the application is easy to use for the
+                        target users.</li>
+                    <li>Project Management → Managing timelines, task distribution, and communication with the
+                        development team.</li>
+                </ul>
+            </div>
+            <div class="flex lg:mt-8 mt-4 font-Jakarta gap-4">
+                <a href="../public/Project/UI_UX Portfolio.pdf"
+                    class="shake-on-hover border-[#717E95] border cursor-pointer text-[#717E95] rounded-full lg:px-8 lg:py-4 px-4 py-2 lg:text-2xl text-base"
+                    data-aos="fade-up" data-aos-duration="1000">Study
+                    Case</a>
+                <a href="/404.html"
+                    class="shake-on-hover border-[#717E95] border cursor-pointer text-[#717E95] rounded-full lg:px-8 lg:py-4 px-4 py-2 lg:text-2xl text-base"
+                    data-aos="fade-up" data-aos-duration="1000">View
+                    Play Store</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lets Talk -->
+    <section class=" lg:mb-24">
+        <div class="relative w-full lg:h-[554px] h-[300px] overflow-hidden bg-fixed bg-center bg-cover"
+            style="background-image: url('/public/bg-lest.png');">
+
+            <!-- Text -->
+            <div class="absolute inset-0 flex flex-col items-center justify-center px-4">
+                <h1 class="lg:text-[60px] text-[28px] font-bold text-white  lg:mb-12 mb-4 font-Jakarta lg:leading-[80px] leading-[32px] text-center"
+                    data-aos="fade-up" data-aos-duration="1000">
+                    Let's Start a Conversation to Make <br> Your Dream Ideas and Projects a Reality
+                </h1>
+                <a href="https://wa.me/6285860380645"
+                    class="bg-black/10 backdrop-blur-md border border-white/30 font-Jakarta text-base lg:text-2xl text-white lg:px-8 lg:py-4 px-4 py-2 rounded-full shadow hover:opacity-90 transition"
+                    data-aos="fade-up" data-aos-duration="1100">
+                    Contact Us
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div class="grid lg:grid-cols-12 grid-cols-4 lg:py-44 py-12 items-center">
+        <!-- Logo -->
+        <div class="lg:col-span-7 col-span-4 flex justify-center  items-center">
+            <img src="/public/Logo.png" alt="Logo" class="lg:w-56 lg:h-56 w-24 h-24">
+            <span class="font-semibold lg:text-[32px] text-xl italic">uiux.byari</span>
+        </div>
+
+        <!-- List Menu -->
+        <div class="lg:col-span-5 flex  col-span-4 flex-col justify-between border-l">
+            <div class="flex flex-col divide-y font-Jakarta">
+                <a href="https://www.instagram.com/uiux.byari/"
+                    class="relative flex items-center gap-8 px-6 py-6 overflow-hidden group">
+                    <!-- Hover Background -->
+                    <span
+                        class="absolute top-0 left-0 w-full h-full lg:bg-white origin-top scale-y-0 transition-transform duration-500 ease-in-out group-hover:scale-y-100 z-0"></span>
+
+                    <!-- Content -->
+                    <span class="text-2xl text-[#717E95] relative z-10">01</span>
+                    <span class="font-bold lg:text-[40px] text-xl text-[#1B1B1B] relative z-10">Instagram</span>
+                </a>
+
+                <a href="https://www.linkedin.com/in/ari-saepuloh/"
+                    class="relative flex items-center gap-8 px-6 py-6 overflow-hidden group">
+                    <span
+                        class="absolute top-0 lg:left-0 w-full h-full lg:bg-white origin-top scale-y-0 transition-transform duration-500 ease-in-out group-hover:scale-y-100 z-0"></span>
+                    <span class="text-2xl text-[#717E95] relative z-10">02</span>
+                    <span class="font-bold lg:text-[40px] text-xl text-[#1B1B1B] relative z-10">Linkedin</span>
+                </a>
+
+                <a href="mailto:ariatenk315@gmail.com"
+                    class="relative flex items-center gap-8 px-6 py-6 overflow-hidden group">
+                    <span
+                        class="absolute top-0 left-0 w-full h-full lg:bg-white origin-top scale-y-0 transition-transform duration-500 ease-in-out group-hover:scale-y-100 z-0"></span>
+                    <span class="text-2xl text-[#717E95] relative z-10">03</span>
+                    <span class="font-bold lg:text-[40px] text-xl text-[#1B1B1B] relative z-10">Email</span>
+                </a>
+
+                <a href="/public/CV_ARI.pdf" class="relative flex items-center gap-8 px-6 py-6 overflow-hidden group">
+                    <span
+                        class="absolute top-0 left-0 w-full h-full lg:bg-white origin-top scale-y-0 transition-transform duration-500 ease-in-out group-hover:scale-y-100 z-0"></span>
+                    <span class="text-2xl text-[#717E95] relative z-10">03</span>
+                    <span class="font-bold lg:text-[40px] text-xl text-[#1B1B1B] relative z-10">CV</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Footer Copyright -->
+    <div class="font-Jakarta text-center mb-4 text-[#717E95] text-sm ">
+        Copyright © 2025 Ari Saepuloh
+    </div>
+
+
+
+
+
+
+
+
+    <script src="src/project.js"></script>
+
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            once: true
+        });
+    </script>
+
+
+
+</body>
+
+</html>
