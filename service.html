@@ -1,0 +1,299 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./dist/output.css" rel="stylesheet">
+    <!-- Font Plus Jakarta -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+        rel="stylesheet">
+    <!-- Font Serif -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Libertinus+Serif:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+        rel="stylesheet">
+    <!-- alpine -->
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.js" defer></script>
+    <!-- link aos -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+
+<body class="scroll-smooth bg-[#F8F8F6]">
+
+    <nav x-data="{ open: false, atTop: true, scrollDirection: 'up', lastScroll: 0 }" @scroll.window="atTop = window.pageYOffset <= 50; 
+                  scrollDirection = (window.pageYOffset > lastScroll) ? 'down' : 'up'; 
+                  lastScroll = window.pageYOffset;"
+        class="px-4 lg:px-[160px] bg-[#F8F8F6] lg:py-6 py-4 flex items-center justify-between sticky top-0 z-[120] transition-transform duration-500 ease-in-out"
+        :class="(scrollDirection === 'up' || atTop) ? 'translate-y-0' : '-translate-y-full'">
+
+        <!-- Logo & Brand -->
+        <a href="home.html" class="flex items-center">
+            <img src="public/Logo.png" alt="Logo" class="lg:w-12 lg:h-12 w-8 h-8" />
+            <span class="font-semibold text-lg italic">uiux.byari</span>
+        </a>
+
+        <!-- Desktop Menu (tengah) -->
+        <div class="hidden md:flex flex-1 justify-center items-center space-x-8 text-center">
+            <a href="index.html" class="font-Jakarta text-lg transition-all duration-100"
+                :class="window.location.pathname.includes('index') ? 'font-bold text-black' : 'text-[#202120] font-medium hover:font-bold hover:text-black'">
+                Home
+            </a>
+            <a href="project.html" class="font-Jakarta text-lg transition-all duration-100"
+                :class="window.location.pathname.includes('project') ? 'font-bold text-black' : 'text-[#202120] font-medium hover:font-bold hover:text-black'">
+                My Project
+            </a>
+            <a href="404.html" class="font-Jakarta text-lg transition-all duration-100"
+                :class="window.location.pathname.includes('service') ? 'font-bold text-black' : 'text-[#202120] font-medium hover:font-bold hover:text-black'">
+                Service
+            </a>
+        </div>
+
+        <!-- Contact button (kanan) -->
+        <div class="hidden md:flex flex-none">
+            <a href="https://wa.me/6285860380645?text=Hallo%20Ari"
+                class="bg-[#202120] font-Jakarta shake-on-hover text-base lg:text-2xl text-white lg:px-8 lg:py-4 px-4 py-2 rounded-full shadow hover:opacity-90 transition">
+                Contact Us
+            </a>
+        </div>
+
+        <!-- Hamburger Menu Button (Mobile) -->
+        <button @click="open = !open" class="md:hidden focus:outline-none z-[130]">
+            <svg x-show="!open" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+            <svg x-show="open" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+        </button>
+
+        <!-- Mobile Menu Fullscreen -->
+        <div x-show="open" x-transition:enter="transition ease-out duration-300"
+            x-transition:enter-start="opacity-0 -translate-y-5" x-transition:enter-end="opacity-100 translate-y-0"
+            x-transition:leave="transition ease-in duration-200" x-transition:leave-start="opacity-100 translate-y-0"
+            x-transition:leave-end="opacity-0 -translate-y-5"
+            class="fixed inset-0 min-h-screen bg-[#F8F8F6] flex flex-col items-center justify-center space-y-6 z-[120] md:hidden"
+            @click.away="open = false">
+            <a href="index.html" class="font-Jakarta text-xl font-medium hover:font-bold">Home</a>
+            <a href="project.html" class="font-Jakarta text-xl font-medium hover:font-bold">My Project</a>
+            <a href="404.html" class="font-Jakarta text-xl font-medium hover:font-bold">Service</a>
+            <a href="https://wa.me/6285860380645?text=Hallo%20Ari"
+                class="bg-[#202120] font-Jakarta text-xl text-white px-6 py-3 rounded-full shadow hover:opacity-90 transition">
+                Contact Us
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section
+        class="px-4 lg:px-[160px]  items-center bg-[url('/public/bg-project.png')] bg-cover bg-center lg:py-24 py-6  ">
+        <div class="lg:flex justify-between items-end  ">
+            <!-- text -->
+            <div class="col-span-7 text-black mt-8 lg:mt-0">
+                <h1 class="lg:text-[80px] font-Jakarta font-bold lg:leading-[90px] text-[44px] leading-[44px] text-[#202120]"
+                    data-aos="fade-up" data-aos-duration="1000">Bringing Your Brand to <br> Life in The Digital <br>
+                    World</h1>
+            </div>
+
+            <!-- image -->
+            <div class="flex flex-col font-Jakarta gap-8 text-[#202120]">
+                <!-- Item 1 -->
+                <div class="group cursor-pointer w-fit">
+                    <h1 class="font-bold lg:text-[32px] text-xl" data-aos="fade-up" data-aos-duration="1000">
+                        UIUX
+                    </h1>
+                    <span
+                        class="block h-[2px] bg-[#202120] w-0 transition-all duration-500 origin-right group-hover:w-full"></span>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="group cursor-pointer w-fit">
+                    <h1 class="font-bold lg:text-[32px] text-xl" data-aos="fade-up" data-aos-duration="900">
+                        Branding
+                    </h1>
+                    <span
+                        class="block h-[2px] bg-[#202120] w-0 transition-all duration-500 origin-right group-hover:w-full"></span>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="group cursor-pointer w-fit">
+                    <h1 class="font-bold lg:text-[32px] text-xl" data-aos="fade-up" data-aos-duration="800">
+                        Website
+                    </h1>
+                    <span
+                        class="block h-[2px] bg-[#202120] w-0 transition-all duration-500 origin-right group-hover:w-full z-50"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     <!-- Image -->
+    <section class="px-4 md:px-8 lg:px-[160px]">
+        <img src="/public/profil-service.png" alt="" class="w-full h-full">
+    </section>
+
+    <!-- conten -->
+    <section class="px-4 md:px-8  lg:px-[160px] ">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 py-24">
+            <!-- Left content -->
+            <div class="flex flex-col justify-center">
+                <h2 class="text-4xl font-bold mb-4 leading-snug">
+                    Turning Ideas Into <br /> Beautiful Solutions
+                </h2>
+                <p class="text-gray-600 mb-8">
+                    I deliver designs that are functional, intuitive, and tailored to your needs
+                </p>
+                <a href="#"
+                    class="inline-flex items-center bg-blue-600 text-white px-6 py-3 max-w-fit rounded-md font-medium hover:bg-blue-700 transition">
+                    Let’s talk
+                    <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    </svg>
+                </a>
+            </div>
+
+            <!-- Right content (cards) -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Card 1 -->
+                <div class="bg-white rounded-xl shadow-sm p-6 border hover:shadow-md transition">
+                    <div class="flex items-center justify-center w-10 h-10 bg-gray-100 rounded mb-4">
+                        <!-- Icon globe -->
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-gray-700" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 21a9 9 0 100-18 9 9 0 000 18z" />
+                        </svg>
+                    </div>
+                    <h3 class="font-semibold text-lg mb-2">Web & App Design</h3>
+                    <p class="text-gray-600 text-sm">
+                        Responsive and modern designs for web and mobile.
+                    </p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-white rounded-xl shadow-sm p-6 border hover:shadow-md transition">
+                    <div class="flex items-center justify-center w-10 h-10 bg-gray-100 rounded mb-4">
+                        <!-- Icon dashboard -->
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-gray-700" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </div>
+                    <h3 class="font-semibold text-lg mb-2">Dashboard Design</h3>
+                    <p class="text-gray-600 text-sm">
+                        Clear, data-focused dashboards for better decisions.
+                    </p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-white rounded-xl shadow-sm p-6 border hover:shadow-md transition">
+                    <div class="flex items-center justify-center w-10 h-10 bg-gray-100 rounded mb-4">
+                        <!-- Icon AI -->
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-gray-700" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6l4 2" />
+                        </svg>
+                    </div>
+                    <h3 class="font-semibold text-lg mb-2">AI-Integrated Solutions</h3>
+                    <p class="text-gray-600 text-sm">
+                        Smarter user experiences with AI-driven designs.
+                    </p>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="bg-white rounded-xl shadow-sm p-6 border hover:shadow-md transition">
+                    <div class="flex items-center justify-center w-10 h-10 bg-gray-100 rounded mb-4">
+                        <!-- Icon logo -->
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-gray-700" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4h16v16H4V4z" />
+                        </svg>
+                    </div>
+                    <h3 class="font-semibold text-lg mb-2">Branding & Logo Design</h3>
+                    <p class="text-gray-600 text-sm">
+                        Creating memorable brands and iconic logos.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <div class="grid lg:grid-cols-12 grid-cols-4 lg:py-44 py-12 items-center">
+        <!-- Logo -->
+        <div class="lg:col-span-7 col-span-4 flex justify-center  items-center">
+            <img src="public/Logo.png" alt="Logo" class="lg:w-56 lg:h-56 w-24 h-24">
+            <span class="font-semibold lg:text-[32px] text-xl italic">uiux.byari</span>
+        </div>
+
+        <!-- List Menu -->
+        <div class="lg:col-span-5 flex  col-span-4 flex-col justify-between border-l">
+            <div class="flex flex-col divide-y font-Jakarta">
+                <a href="https://www.instagram.com/uiux.byari/"
+                    class="relative flex items-center gap-8 px-6 py-6 overflow-hidden group">
+                    <!-- Hover Background -->
+                    <span
+                        class="absolute top-0 left-0 w-full h-full lg:bg-white origin-top scale-y-0 transition-transform duration-500 ease-in-out group-hover:scale-y-100 z-0"></span>
+
+                    <!-- Content -->
+                    <span class="text-2xl text-[#717E95] relative z-10">01</span>
+                    <span class="font-bold lg:text-[40px] text-xl text-[#1B1B1B] relative z-10">Instagram</span>
+                </a>
+
+                <a href="https://www.linkedin.com/in/ari-saepuloh/"
+                    class="relative flex items-center gap-8 px-6 py-6 overflow-hidden group">
+                    <span
+                        class="absolute top-0 lg:left-0 w-full h-full lg:bg-white origin-top scale-y-0 transition-transform duration-500 ease-in-out group-hover:scale-y-100 z-0"></span>
+                    <span class="text-2xl text-[#717E95] relative z-10">02</span>
+                    <span class="font-bold lg:text-[40px] text-xl text-[#1B1B1B] relative z-10">Linkedin</span>
+                </a>
+
+                <a href="mailto:ariatenk315@gmail.com"
+                    class="relative flex items-center gap-8 px-6 py-6 overflow-hidden group">
+                    <span
+                        class="absolute top-0 left-0 w-full h-full lg:bg-white origin-top scale-y-0 transition-transform duration-500 ease-in-out group-hover:scale-y-100 z-0"></span>
+                    <span class="text-2xl text-[#717E95] relative z-10">03</span>
+                    <span class="font-bold lg:text-[40px] text-xl text-[#1B1B1B] relative z-10">Email</span>
+                </a>
+
+                <a href="public/CV_ARI.pdf" class="relative flex items-center gap-8 px-6 py-6 overflow-hidden group">
+                    <span
+                        class="absolute top-0 left-0 w-full h-full lg:bg-white origin-top scale-y-0 transition-transform duration-500 ease-in-out group-hover:scale-y-100 z-0"></span>
+                    <span class="text-2xl text-[#717E95] relative z-10">03</span>
+                    <span class="font-bold lg:text-[40px] text-xl text-[#1B1B1B] relative z-10">CV</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Footer Copyright -->
+    <div class="font-Jakarta text-center mb-4 text-[#717E95] text-sm ">
+        Copyright © 2025 Ari Saepuloh
+    </div>
+
+
+
+
+
+
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            once: true
+        });
+    </script>
+
+    <script src="src/main.js"></script>
+
+</body>
+
+</html>
