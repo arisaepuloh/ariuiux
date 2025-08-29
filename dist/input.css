@@ -1,0 +1,122 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+#image {
+  animation: float 3s ease-in-out infinite;
+  transition: transform 0.3s ease;
+  transform-style: preserve-3d;
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+
+
+#slider {
+  animation: loopSlider 25s linear infinite;
+}
+
+@keyframes loopSlider {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-2000px);
+    /* 5 slide x 400px */
+  }
+}
+
+
+/* Skill shake */
+.shake-on-hover:hover {
+  animation: shake 1.2s ease-in-out infinite;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translate(0, 0) rotate(0deg); }
+  20% { transform: translate(-1px, -1px) rotate(-1deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  60% { transform: translate(-1px, 1px) rotate(-1deg); }
+  80% { transform: translate(1px, 1px) rotate(1deg); }
+}
+
+
+
+/* Iklan Jalan  */
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee-content {
+  display: inline-flex;
+  animation: marquee 30s linear infinite;
+}
+
+/* Css */
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+
+/* Marque di projct */
+.animate-marquee {
+  display: inline-block;
+  animation: marquee 80s linear infinite;
+}
+
+
+
+/* CSS SKILL */
+.skill-item {
+    @apply shake-on-hover cursor-pointer lg:px-6 lg:py-3 px-4 py-2 rounded-full lg:text-2xl text-base font-medium text-white;
+    border: none !important;
+    position: relative;
+  }
+
+  /* Efek tumpuk-tumpuk hanya di desktop */
+  @media (min-width: 1024px) {
+    .skill-item:nth-child(1) { top: 20px; }
+    .skill-item:nth-child(2) { top: -10px; }
+    .skill-item:nth-child(3) { top: 35px; }
+    .skill-item:nth-child(4) { top: -15px; }
+    .skill-item:nth-child(5) { top: 25px; }
+    .skill-item:nth-child(6) { top: -20px; }
+    .skill-item:nth-child(7) { top: 30px; }
+    .skill-item:nth-child(8) { top: -5px; }
+    .skill-item:nth-child(9) { top: 40px; }
+    .skill-item:nth-child(10) { top: -15px; }
+    .skill-item:nth-child(11) { top: 20px; }
+    .skill-item:nth-child(12) { top: -10px; }
+    .skill-item:nth-child(13) { top: 25px; }
+  }
+
