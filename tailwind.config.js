@@ -7,7 +7,8 @@ module.exports = {
     "./service.html",
     "./src/**/*.{js,css,html}",
     "./project/**/*.{js,css,html}",
-    "./project/hasanah.html",
+    "./hasanah.html",
+    "./pos.html"
   ],
   theme: {
     extend: {

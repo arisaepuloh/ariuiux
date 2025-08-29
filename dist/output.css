@@ -648,12 +648,12 @@ video {
   z-index: 80;
 }
 
-.order-2 {
-  order: 2;
-}
-
 .order-1 {
   order: 1;
+}
+
+.order-2 {
+  order: 2;
 }
 
 .col-span-4 {
@@ -715,10 +715,6 @@ video {
 
 .mt-8 {
   margin-top: 2rem;
-}
-
-.mt-0 {
-  margin-top: 0px;
 }
 
 .block {
@@ -1142,6 +1138,10 @@ video {
   background-image: url('/public/bg-project.png');
 }
 
+.bg-\[url\(\'public\/bg-project\.png\'\)\] {
+  background-image: url('public/bg-project.png');
+}
+
 .bg-cover {
   background-size: cover;
 }
@@ -1201,11 +1201,6 @@ video {
 .py-4 {
   padding-top: 1rem;
   padding-bottom: 1rem;
-}
-
-.py-44 {
-  padding-top: 11rem;
-  padding-bottom: 11rem;
 }
 
 .py-6 {
@@ -1284,10 +1279,6 @@ video {
 .text-xl {
   font-size: 1.25rem;
   line-height: 1.75rem;
-}
-
-.text-\[2px\] {
-  font-size: 2px;
 }
 
 .font-bold {
@@ -1894,12 +1885,12 @@ video {
     height: 400px;
   }
 
-  .lg\:h-\[554px\] {
-    height: 554px;
+  .lg\:h-\[533px\] {
+    height: 533px;
   }
 
-  .lg\:h-\[600px\] {
-    height: 600px;
+  .lg\:h-\[554px\] {
+    height: 554px;
   }
 
   .lg\:w-12 {
