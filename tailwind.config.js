@@ -8,7 +8,8 @@ module.exports = {
     "./src/**/*.{js,css,html}",
     "./project/**/*.{js,css,html}",
     "./hasanah.html",
-    "./pos.html"
+    "./pos.html",
+    "./public/**/*.{js,css,html}"
   ],
   theme: {
     extend: {
