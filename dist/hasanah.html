@@ -28,7 +28,7 @@
     <nav x-data="{ open: false, atTop: true, scrollDirection: 'up', lastScroll: 0 }" @scroll.window="atTop = window.pageYOffset <= 50; 
                      scrollDirection = (window.pageYOffset > lastScroll) ? 'down' : 'up'; 
                      lastScroll = window.pageYOffset;"
-        class="px-4 lg:px-[160px] lg:py-6 py-4 bg-[#F8F8F6] bg-wh flex items-center justify-between sticky top-0 z-[120] transition-transform duration-500 ease-in-out"
+        class="px-4 md:px-8 lg:px-[60px] xl:px-[160px] lg:py-6 py-4 bg-[#F8F8F6] bg-wh flex items-center justify-between sticky top-0 z-[120] transition-transform duration-500 ease-in-out"
         :class="(scrollDirection === 'up' || atTop) ? 'translate-y-0' : 'translate-y-[-100%]'">
         <div class="flex items-start space-x-8 gap-4 hover:scale-110">
             <a href="project.html"
@@ -42,7 +42,7 @@
 
 
     <!-- Hero Section -->
-    <section class="px-4 lg:px-[160px] items-center bg-[url('/bg-project.png')] bg-cover bg-center py-12 mb-24">
+    <section class="px-4 md:px-8 lg:px-[60px] xl:px-[160px] items-center bg-[url('/bg-project.png')] bg-cover bg-center py-12 mb-24">
         <div class="w-full">
             <img src="kebab.png" alt="" class="w-full h-auto" data-aos="fade-up" data-aos-duration="900">
         </div>

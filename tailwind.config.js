@@ -12,10 +12,13 @@ module.exports = {
     "./public/**/*.{js,css,html}"
   ],
   theme: {
-    extend: {
+   extend: {
       fontFamily: {
         "Jakarta": ['Plus Jakarta Sans'],
         "Libaritus": ['Libaritus'],
+      },
+      screens: {
+        'laptop': '1920px', // custom breakpoint
       },
     },
   },
