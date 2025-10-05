@@ -712,6 +712,10 @@ video {
   margin-top: -5rem;
 }
 
+.-mt-4 {
+  margin-top: -1rem;
+}
+
 .-mt-44 {
   margin-top: -11rem;
 }
@@ -726,6 +730,10 @@ video {
 
 .-mt-8 {
   margin-top: -2rem;
+}
+
+.-mt-80 {
+  margin-top: -20rem;
 }
 
 .-mt-96 {
@@ -798,14 +806,6 @@ video {
 
 .mt-96 {
   margin-top: 24rem;
-}
-
-.-mt-4 {
-  margin-top: -1rem;
-}
-
-.-mt-80 {
-  margin-top: -20rem;
 }
 
 .block {
@@ -2365,18 +2365,6 @@ video {
 }
 
 @media (min-width: 1920px) {
-  .laptop\:-mt-20 {
-    margin-top: -5rem;
-  }
-
-  .laptop\:-mt-44 {
-    margin-top: -11rem;
-  }
-
-  .laptop\:-mt-4 {
-    margin-top: -1rem;
-  }
-
   .laptop\:-mt-80 {
     margin-top: -20rem;
   }
